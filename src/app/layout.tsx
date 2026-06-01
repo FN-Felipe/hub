@@ -20,7 +20,14 @@ const instrument = Instrument_Serif({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: `${PROFILE.name} — ${PROFILE.role}`,
   description:
     "Portfólio de Felipe Assis, desenvolvedor full-stack (React + Node) com IA aplicada de verdade.",

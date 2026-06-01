@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { GitHub, LinkedIn, Menu, Moon, Sun, WhatsApp } from "@/components/icons";
+import { Logo } from "@/components/logo";
 import { PROFILE } from "@/lib/content";
 
 type Theme = "dark" | "light";
@@ -165,8 +166,8 @@ export function Nav() {
         className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-4 sm:px-8 lg:px-12"
       >
         <a href="#topo" className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-ink text-sm font-bold tracking-tight text-bg">
-            {PROFILE.monogram}
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-line bg-surface">
+            <Logo className="h-5 w-5" />
           </span>
           <span className="text-[15px] font-semibold tracking-tight text-ink">
             {PROFILE.name}

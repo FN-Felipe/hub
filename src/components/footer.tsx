@@ -1,3 +1,4 @@
+import { Logo } from "@/components/logo";
 import { PROFILE } from "@/lib/content";
 
 const LINKS = [
@@ -10,7 +11,8 @@ const LINKS = [
 export function Footer() {
   return (
     <footer className="mx-auto flex w-full max-w-[1200px] flex-col items-center gap-3 px-6 py-7 sm:px-8 md:flex-row md:justify-between lg:px-12">
-      <p className="order-2 text-[13px] font-medium text-faint md:order-1">
+      <p className="order-2 flex items-center gap-2 text-[13px] font-medium text-faint md:order-1">
+        <Logo gradientId="fa-logo-footer" className="h-4 w-4" />
         © 2026 {PROFILE.name}
       </p>
       <p className="order-3 text-[13px] text-faint md:order-2">
