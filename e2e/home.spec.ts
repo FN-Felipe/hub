@@ -52,8 +52,8 @@ test.describe("Hub — home", () => {
       page.getByRole("link", { name: "LinkedIn" }).first(),
     ).toHaveAttribute("href", "https://www.linkedin.com/in/felipe-assis-ls/");
     await expect(
-      page.getByRole("link", { name: /felipe\.assis@ucred\.com\.br/ }),
-    ).toHaveAttribute("href", "mailto:felipe.assis@ucred.com.br");
+      page.getByRole("link", { name: /assis-felipe@outlook\.com/ }),
+    ).toHaveAttribute("href", "mailto:assis-felipe@outlook.com");
   });
 
   test("anchor navigation points to sections", async ({ page }) => {
